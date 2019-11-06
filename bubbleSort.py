@@ -2,7 +2,7 @@
 import numpy as np
 import timeit
 
-num_items = 1000
+num_items = 100
 
 dataset = np.random.randint(1,200,num_items)
 
@@ -12,12 +12,12 @@ print("\n\n")
 
 timer_start = timeit.default_timer()
 
-for i in range(len(dataset)):
-    for j in range(i+1, len(dataset),2):
-        if(dataset[i] > dataset[j]):
-            current_num = dataset[i]
-            dataset[i] = dataset[j]
-            dataset[j] = current_num
+for i in range(len(dataset)-1,0,-1):
+    for j in range(i):
+        if(dataset[j] > dataset[j+1]):
+            temp = dataset[j]
+            dataset[j] = dataset[j+1]
+            dataset[j+1] = temp
 
 
 timer_end = timeit.default_timer()
