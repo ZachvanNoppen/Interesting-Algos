@@ -10,7 +10,7 @@ I'll write my own version/ implementation of it for better understanding.
 - Bubble Sort
 - Binary Search
 
-###TODO
+### TODO
 - Merge Sort (SORTING)
 - Quick Sort (SORTING)
 - Heap Sort (SORTING)
